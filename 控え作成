@@ -1,0 +1,30 @@
+Sub 控作成_レギュラー()
+'
+' 控作成_レギュラー Macro
+'
+
+'
+    Range("A17:AH31").Select
+    Selection.Copy
+    ActiveWindow.SmallScroll Down:=12
+    ActiveWindow.SmallScroll Down:=16
+    ActiveWindow.SmallScroll Down:=20
+    ActiveWindow.SmallScroll Down:=24
+    ActiveWindow.SmallScroll Down:=28
+    ActiveWindow.SmallScroll Down:=32
+    Range("A49:AH63").Select
+    ActiveSheet.Paste
+    Range("A17:AH31").Select
+    Selection.Copy
+    ActiveWindow.SmallScroll Down:=12
+    ActiveWindow.SmallScroll Down:=16
+    ActiveWindow.SmallScroll Down:=20
+    ActiveWindow.SmallScroll Down:=24
+    ActiveWindow.SmallScroll Down:=28
+    ActiveWindow.SmallScroll Down:=32
+    Range("A49:AH63").Select
+    ActiveSheet.Paste
+    
+    Range("a17").Select
+    
+End Sub
