@@ -1,0 +1,185 @@
+Sub 請求書()
+'
+' 請求書 Macro
+' レギュラーな請求書 建築・環境　開発営業から
+'
+
+'
+    Sheets("請求書").Select
+    Sheets("請求書").Copy Before:=Sheets(2)
+    
+    '以下共通項
+    
+    '請求書№
+    Range("AF1:AH1").Value = Worksheets("入力画面").Range("b4")
+    '日付
+    Range("AE3").Value = Worksheets("入力画面").Range("b6")
+    Range("AG3").Value = Worksheets("入力画面").Range("f6")
+    '宛先
+    Range("C5:N5").Value = Worksheets("入力画面").Range("b5")
+    '担当部署
+    Range("AB15:AD15").Value = Worksheets("入力画面").Range("b7")
+    '担当者名
+    Range("AG15:AH15").Value = Worksheets("入力画面").Range("b8")
+    '工事名称
+    Range("C18:T18").Value = Worksheets("入力画面").Range("b9")
+    '件名
+    Range("F19").Value = Worksheets("入力画面").Range("b11")
+    '金額
+    Range("AA19:AE19").Value = Worksheets("入力画面").Range("b10") / 1.1
+    '工事番号
+    Range("AK2").Value = Worksheets("入力画面").Range("b12")
+
+    
+
+
+
+    Range("A18").Select
+End Sub
+Sub 請求書_振込手数料()
+'
+' 請求書_振込手数料 Macro
+'
+
+'
+    Sheets("請求書(振込手数料有)").Select
+    Sheets("請求書(振込手数料有)").Copy Before:=Sheets(2)
+    
+    
+    '請求書№
+    Range("AF1:AH1").Value = Worksheets("入力画面").Range("b4")
+    '日付
+    Range("AE3").Value = Worksheets("入力画面").Range("b6")
+    Range("AG3").Value = Worksheets("入力画面").Range("f6")
+    '宛先
+    Range("C5:N5").Value = Worksheets("入力画面").Range("b5")
+    '担当部署
+    Range("AB15:AD15").Value = Worksheets("入力画面").Range("b7")
+    '担当者名
+    Range("AG15:AH15").Value = Worksheets("入力画面").Range("b8")
+    '工事名称
+    Range("C18:T18").Value = Worksheets("入力画面").Range("b9")
+    '件名
+    Range("C19:T19").Value = Worksheets("入力画面").Range("b11")
+    '金額
+    Range("AA19:AE19").Value = Worksheets("入力画面").Range("b10") / 1.1
+    '工事番号
+    Range("AK2").Value = Worksheets("入力画面").Range("b12")
+
+    
+    Range("A18").Select
+End Sub
+Sub 請求書_領収証()
+
+    Sheets("請求書(領収有)").Select
+    Sheets("請求書(領収有)").Copy Before:=Sheets(2)
+    
+    
+    '請求書№
+    Range("AF1:AH1").Value = Worksheets("入力画面").Range("b4")
+    '日付
+    Range("AE3").Value = Worksheets("入力画面").Range("b6")
+    Range("AG3").Value = Worksheets("入力画面").Range("f6")
+    '宛先
+    Range("C5:N5").Value = Worksheets("入力画面").Range("b5")
+    '担当部署
+    Range("AB15:AD15").Value = Worksheets("入力画面").Range("b7")
+    '担当者名
+    Range("AG15:AH15").Value = Worksheets("入力画面").Range("b8")
+    '工事名称
+    Range("C18:T18").Value = Worksheets("入力画面").Range("b9")
+    '件名
+    Range("C19:T19").Value = Worksheets("入力画面").Range("b11")
+    '金額
+    Range("AA19:AE19").Value = Worksheets("入力画面").Range("b10") / 1.1
+    '工事番号
+    Range("AK2").Value = Worksheets("入力画面").Range("b12")
+
+    
+    
+    Range("A18").Select
+End Sub
+
+Sub 請求書_振込手数料_領収証()
+
+    Sheets("請求書(領収有・振込手数料有）").Select
+    Sheets("請求書(領収有・振込手数料有）").Copy Before:=Sheets(2)
+    
+    
+    '請求書№
+    Range("AF1:AH1").Value = Worksheets("入力画面").Range("b4")
+    '日付
+    Range("AE3").Value = Worksheets("入力画面").Range("b6")
+    Range("AG3").Value = Worksheets("入力画面").Range("f6")
+    '宛先
+    Range("C5:N5").Value = Worksheets("入力画面").Range("b5")
+    '担当部署
+    Range("AB15:AD15").Value = Worksheets("入力画面").Range("b7")
+    '担当者名
+    Range("AG15:AH15").Value = Worksheets("入力画面").Range("b8")
+    '工事名称
+    Range("C18:T18").Value = Worksheets("入力画面").Range("b9")
+    '件名
+    Range("C19:T19").Value = Worksheets("入力画面").Range("b11")
+    '金額
+    Range("AA19:AE19").Value = Worksheets("入力画面").Range("b10") / 1.1
+    '工事番号
+    Range("AK2").Value = Worksheets("入力画面").Range("b12")
+
+    
+    
+    Range("A18").Select
+
+End Sub
+Sub 請求書_但陽信用金庫()
+
+    Sheets("但陽信用金庫").Select
+    Sheets("但陽信用金庫").Copy Before:=Sheets(2)
+    
+    
+    '請求書№
+    Range("AF1:AH1").Value = Worksheets("入力画面").Range("b4")
+    '日付
+    Range("AE3").Value = Worksheets("入力画面").Range("b6")
+    Range("AG3").Value = Worksheets("入力画面").Range("f6")
+    '宛先
+    Range("C5:N5").Value = Worksheets("入力画面").Range("b5")
+    '工事名称
+    Range("C17:T17").Value = Worksheets("入力画面").Range("b9")
+     '件名
+    Range("C18:T18").Value = Worksheets("入力画面").Range("b11")
+    '金額
+    Range("AA18:AE18").Value = Worksheets("入力画面").Range("b10") / 1.1
+    '工事番号
+    Range("AK2").Value = Worksheets("入力画面").Range("b12")
+    
+    
+    Range("A18").Select
+
+End Sub
+Sub 請求書_姫路市()
+
+    Sheets("市役所").Select
+    Sheets("市役所").Copy Before:=Sheets(2)
+    
+    
+    '請求書№
+    Range("AF1:AH1").Value = Worksheets("入力画面").Range("b4")
+    '日付
+    Range("AE3").Value = Worksheets("入力画面").Range("b6")
+    Range("AG3").Value = Worksheets("入力画面").Range("f6")
+    '宛先
+    Range("C5:N5").Value = Worksheets("入力画面").Range("b5")
+    '工事名称
+    Range("C17:T17").Value = Worksheets("入力画面").Range("b9")
+    '件名
+    Range("C18:T18").Value = Worksheets("入力画面").Range("b11")
+    '金額
+    Range("AA18:AE18").Value = Worksheets("入力画面").Range("b10") / 1.1
+    '工事番号
+    Range("AK2").Value = Worksheets("入力画面").Range("b12")
+    
+    
+    
+    Range("A18").Select
+End Sub
