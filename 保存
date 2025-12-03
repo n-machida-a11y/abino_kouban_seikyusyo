@@ -1,0 +1,43 @@
+Sub 保存_印刷作業()
+'
+
+Application.ScreenUpdating = False
+
+
+'module6にtestコード
+
+
+'シート名を作成中の請求書№から取得する
+ActiveSheet.Name = ActiveSheet.Range("Af1").Value
+
+
+
+'現在のシートを選択し、移動させる。「一時保管先」ファイルを保存先とする。
+   ActiveSheet.Select
+    ActiveSheet.Move
+    
+    ChDir "\\SERVER02\Data\総務請求書用紙\令和一時保管先"
+    
+    
+    'ﾌｧｲﾙ名を「ak1」のセルから取得して保存する。
+    ActiveWorkbook.SaveAs Filename:= _
+        "\\SERVER02\Data\総務請求書用紙\令和一時保管先\" & Range("ak1"), FileFormat:= _
+        xlOpenXMLWorkbook, CreateBackup:=False
+
+    ActiveWindow.Close
+  
+    Application.ScreenUpdating = True
+
+
+
+End Sub
+
+Sub 印刷()
+
+
+
+'選択中のシート（作成中の請求書）を印刷する
+    ActiveWindow.SelectedSheets.PrintOut Copies:=1, Collate:=True, _
+        IgnorePrintAreas:=False
+
+End Sub
